@@ -6,6 +6,27 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "dishes"
+    label: "Dishes"
+    folder: "src/pages/dishes"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "dish-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "markdown"}
+
+  - name: "menu"
+    label: "Menu"
+    folder: "src/pages/menu"
+    create: true
+    slug: "{{slug}}"
+    widget: "relation"
+    collection: "dishes"
+    searchFields: ["title"]
+    valueField: "title"
+    displayFields: ["title"]
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
