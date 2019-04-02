@@ -22,12 +22,20 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Dish", name: "dish", widget: "relation", multiple: true}
-    collection: "dishes"
-    searchFields: ["title"]
-    valueField: "title"
-    displayFields: ["title"]
+      - {label: "Title",
+          name: "title",
+          widget: "string"
+      }
+      - {label: "Dish",
+          name: "dish",
+          widget: "relation",
+          multiple: true,
+          collection: "dishes",
+          searchFields: ["title"],
+          valueField: "title",
+          displayFields: ["title"]
+      }
+
 
   - name: "blog"
     label: "Blog"
