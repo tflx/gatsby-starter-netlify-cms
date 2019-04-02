@@ -8,6 +8,7 @@ public_folder: /img
 collections:
   - name: "dishes"
     label: "Dishes"
+    format: 'json'
     folder: "src/pages/dishes"
     create: true
     slug: "{{slug}}"
