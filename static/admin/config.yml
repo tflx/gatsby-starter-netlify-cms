@@ -24,7 +24,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "menu-page"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Dish", name: "dish", widget: "relation", multiple: true}
+      - {label: "Dish", name: "dishes", widget: "relation", multiple: true}
     collection: "dishes"
     searchFields: ["title"]
     valueField: "title"
