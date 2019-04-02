@@ -27,7 +27,7 @@ collections:
       - {label: "Dish", name: "dish", widget: "relation", multiple: true}
     collection: "dishes"
     searchFields: ["title"]
-    valueField: "templateKey"
+    valueField: "title"
     displayFields: ["title"]
 
   - name: "blog"
