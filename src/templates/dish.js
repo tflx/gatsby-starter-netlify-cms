@@ -46,6 +46,7 @@ const Dish = ({ data }) => {
 
   return (
     <Layout>
+      <h1>BUM</h1>
       <DishTemplate
         content={post.html}
         contentComponent={HTMLContent}
