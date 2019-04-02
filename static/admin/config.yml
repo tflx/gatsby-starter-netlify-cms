@@ -22,10 +22,11 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Dish", name: "dish", widget: "relation"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Dish", name: "dish", widget: "relation", multiple: true}
     collection: "dishes"
     searchFields: ["title"]
-    valueField: "title"
+    valueField: "templateKey"
     displayFields: ["title"]
 
   - name: "blog"
