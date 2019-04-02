@@ -8,6 +8,7 @@ public_folder: /img
 collections:
   - name: "dishes"
     label: "Dishes"
+    label_singular: "Dish"
     format: 'json'
     folder: "src/pages/dishes"
     create: true
@@ -26,8 +27,8 @@ collections:
           name: "title",
           widget: "string"
       }
-      - {label: "Dish",
-          name: "dish",
+      - {label: "Dishes",
+          name: "dishes",
           widget: "relation",
           multiple: true,
           collection: "dishes",
