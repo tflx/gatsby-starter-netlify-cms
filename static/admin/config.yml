@@ -21,7 +21,8 @@ collections:
     folder: "src/pages/menu"
     create: true
     slug: "{{slug}}"
-    widget: "relation"
+    fields:
+      - {label: "Dish", name: "dish", widget: "relation"}
     collection: "dishes"
     searchFields: ["title"]
     valueField: "title"
