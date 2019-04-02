@@ -12,7 +12,6 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "dish-post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "markdown"}
 
@@ -22,6 +21,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "menu-page"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Dish", name: "dish", widget: "relation", multiple: true}
     collection: "dishes"
