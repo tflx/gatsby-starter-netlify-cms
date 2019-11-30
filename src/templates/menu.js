@@ -31,7 +31,7 @@ MenuTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
-const MenuPage = ({ data }) => {
+const Menu = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
@@ -45,14 +45,14 @@ const MenuPage = ({ data }) => {
   )
 }
 
-MenuPage.propTypes = {
+Menu.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default MenuPage
+export default Menu
 
-export const menuPageQuery = graphql`
-  query MenuPage($id: String!) {
+export const menuQuery = graphql`
+  query Menu($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

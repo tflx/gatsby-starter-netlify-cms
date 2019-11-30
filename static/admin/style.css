@@ -1,0 +1,11 @@
+* {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+}
+aside, li, a, span {
+}
+
+main > div, ul > li {
+  width: 100% !important;
+}

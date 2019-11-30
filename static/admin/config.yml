@@ -14,7 +14,6 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "dish"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "markdown"}
 
@@ -24,20 +23,18 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "menu"}
-      - {label: "Title",
-          name: "title",
-          widget: "string"
-      }
-      - {label: "Dishes",
-          name: "dishes",
-          widget: "relation",
-          multiple: true,
-          collection: "dishes",
-          searchFields: ["title"],
-          valueField: "title",
-          displayFields: ["title"]
-      }
+      - {label: "Title", name: "title", widget: "string" }
+      - label: "Dishes"
+        name: "dishes"
+        widget: "list"
+        fields:
+          - label: "dish"
+            widget: "relation"
+            collection: "dishes"
+            searchFields: ["title"]
+            valueField: "title"
+            displayFields: ["title"]
+
 
 
   - name: "blog"
